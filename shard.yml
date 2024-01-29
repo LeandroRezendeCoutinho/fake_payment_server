@@ -1,0 +1,17 @@
+name: fake_payment_server
+version: 0.1.0
+
+authors:
+  - leandrorezendecoutinho <leandro.rc.contato@gmail.com>
+
+targets:
+  fake_payment_server:
+    main: src/server.cr
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+crystal: '>= 1.11.2'
+
+license: MIT
