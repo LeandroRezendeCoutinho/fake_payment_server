@@ -30,11 +30,20 @@ post "/charges" do |env|
   }.to_json
 end
 
+post "/webhooks" do |env|
+  env.response.content_type = "application/json"
+  env.response.status_code = 200
+  puts "Webhook: #{env.params.json}"
+  {
+    success: true
+  }.to_json
+end
+
 get "/bench" do
   time = Time.local
   url = "http://127.0.0.1:3000/charges"  
   
-  3_000.times do |n|
+  1.times do |n|
     json_payload = %({
       "amount": #{rand(1_000)},
       "status": "authorized",
