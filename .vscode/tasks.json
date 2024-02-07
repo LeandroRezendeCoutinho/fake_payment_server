@@ -1,0 +1,16 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"type": "crystal",
+			"command": "run",
+			"file": "src/server.cr",
+			"problemMatcher": [],
+			"label": "Crystal: run - src/server.cr",
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			}
+		}
+	]
+}
